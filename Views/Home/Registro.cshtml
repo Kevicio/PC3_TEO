@@ -1,0 +1,75 @@
+@model PC3_TEO.Models.Producto
+
+
+@{
+    ViewData["Title"] = "Vista de Registros de Productos";
+}
+
+
+<div asp-validation-summary="All" class="text-danger" ></div>
+
+<form method="post">
+
+    <div class="form-group">
+        <label asp-for="Nombre">Producto:</label>
+        <input asp-for="Nombre" class="form-control">
+        <span asp-validation-for="Nombre" class="text-danger"></span> 
+    </div>
+
+
+    <div class="form-group">
+        <label asp-for="Foto">Foto del Producto (URL):</label>
+        <input asp-for="Foto" class="form-control">
+         <span asp-validation-for="Foto" class="text-danger"></span> 
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Descripcion">Descripcion</label>
+        <textarea asp-for="Descripcion" cols="30" rows="10" class="form-control"></textarea>
+         <span asp-validation-for="Descripcion" class="text-danger"></span> 
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Fecha">Fecha:</label>
+        <input asp-for="Fecha" class="form-control">
+         <span asp-validation-for="Fecha" class="text-danger"></span> 
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Precio">Precio</label>
+        <input asp-for="Precio" class="form-control">
+         <span asp-validation-for="Precio" class="text-danger"></span> 
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Celular">Celular del Contacto:</label>
+        <input asp-for="Celular" class="form-control">
+         <span asp-validation-for="Celular" class="text-danger"></span> 
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LugarCompra">Lugar Compra:</label>
+        <input asp-for="LugarCompra" class="form-control">
+         <span asp-validation-for="LugarCompra" class="text-danger"></span> 
+    </div>
+
+     <div class="form-group">
+        <label asp-for="NombreComprador">Nombre Comprador:</label>
+        <input asp-for="NombreComprador" class="form-control">
+         <span asp-validation-for="NombreComprador" class="text-danger"></span> 
+    </div>
+
+    <div class="form-group">
+                <label asp-for="Categoria">Categoria</label>
+                <select name="Categoria">
+                    <option value="1">Tecnología</option>
+                    <option value="2">Arte</option>
+                    <option value="3">Ropa</option>
+                    <option value="4">Muebles del hogar</option>
+
+                </select>
+             </div> 
+
+<button class="btn btn-danger">ENVIAR</button>
+
+</form>
