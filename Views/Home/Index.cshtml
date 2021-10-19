@@ -1,8 +1,63 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<PC3_TEO.Models.Producto>
+    
+@{
+    ViewData["Title"] = "Lista de Productos Registrados";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<h1 style="text-align:center;">Listado de Productos</h1>
+ <table class="table">
+    <thead class="thead-dark" align="center">
+        <tr>
+            <th>
+                Nombre Comprador
+            </th>
+            <th>
+               Usuario Nombre
+            </th>
+
+            <th>
+               Producto
+            </th>
+
+            <th>
+                Foto
+            </th>
+            
+            <th>
+                Categoria
+            </th>
+        </tr>
+    </thead>
+    <tbody align="center">
+
+
+@foreach (var solicitud in Model) {
+    
+        <tr>
+            <td>
+                @solicitud.NombreComprador
+            </td>
+            <td>
+                
+            </td>
+            <th>
+               @solicitud.Nombre
+            </th>
+            <td>
+                <img class="img-responsive" width="90" height="100" src="/img/@solicitud.Foto"
+                                        alt="@solicitud.Foto" />
+            </td>
+            <td>
+                @solicitud.CategoriaId
+            </td>
+        </tr>
+}
+    </tbody>
+
+</table>
+

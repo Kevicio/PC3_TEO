@@ -8,7 +8,7 @@
 
 <div asp-validation-summary="All" class="text-danger" ></div>
 
-<form method="post">
+<form asp-controller="Home" asp-action="Registrar">
 
     <div class="form-group">
         <label asp-for="Nombre">Producto:</label>
@@ -60,16 +60,18 @@
     </div>
 
     <div class="form-group">
-                <label asp-for="Categoria">Categoria</label>
-                <select name="Categoria">
+                <label asp-for="CategoriaId">Categoria</label>
+                <select name="CategoriaId">
                     <option value="1">Tecnología</option>
-                    <option value="2">Arte</option>
-                    <option value="3">Ropa</option>
+                    <option value="2">Ropa</option>
+                    <option value="3">Arte</option>
                     <option value="4">Muebles del hogar</option>
 
                 </select>
              </div> 
 
-<button class="btn btn-danger">ENVIAR</button>
+<div style="text-align:center;" >
+         <button type="submit" class="btn btn-danger">Registrar</button>
+     </div>
 
 </form>
