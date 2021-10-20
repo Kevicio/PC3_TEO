@@ -13,6 +13,8 @@ namespace PC3_TEO.Data
         {
         }
         public DbSet<PC3_TEO.Models.Producto> Productos {get;set;}
+        public DbSet<PC3_TEO.Models.Categoria> Categorias {get;set;}
+        public DbSet<PC3_TEO.Models.Usuario> Usuarios {get;set;}
         
     }
 }

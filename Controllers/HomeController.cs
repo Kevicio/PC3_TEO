@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using PC3_TEO.Models;
 using PC3_TEO.Data;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -24,10 +23,10 @@ namespace PC3_TEO.Controllers
             _context= context;
         }
 
-        public IActionResult Index()
+         public async Task<IActionResult> Index()
         {
-            var listarProductos = _context.Productos.ToList();
-            return View(listarProductos);
+            var productos = from o in _context.Productos select o;
+            return View(await productos.ToListAsync());
         }
 
         public IActionResult Registro()

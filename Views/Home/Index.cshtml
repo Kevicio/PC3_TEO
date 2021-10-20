@@ -36,6 +36,7 @@
     <tbody align="center">
 
 
+
 @foreach (var solicitud in Model) {
     
         <tr>
@@ -43,7 +44,7 @@
                 @solicitud.NombreComprador
             </td>
             <td>
-                
+                @solicitud.UsuarioId
             </td>
             <th>
                @solicitud.Nombre
